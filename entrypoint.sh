@@ -31,6 +31,11 @@ fi
 wget https://raw.githubusercontent.com/InsightSoftwareConsortium/ITK/${itk_branch}/Utilities/Maintenance/clang-format.bash
 chmod +x ./clang-format.bash
 
+echo $PATH
+find / -name clang-format
+which clang-format
+clang-format --version
+
 if ! test -f ./.clang-format; then
   cp /ITK.clang-format ./.clang-format
 fi
